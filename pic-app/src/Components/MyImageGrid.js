@@ -16,7 +16,7 @@ const MyImageGrid = ({setSelectedImg}) => {
                 >
 
                     <motion.img src={doc.url} alt="uploads" 
-                       inital={{ opacity: 0 }}
+                       initial={{ opacity: 0 }}
                        animate={{ opacity: 1 }}
                        transition={{ delay: 1}}
                     />

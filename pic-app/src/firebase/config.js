@@ -13,18 +13,20 @@ import { getFirestore, serverTimestamp, collection, addDoc } from 'firebase/fire
 //import { initializeApp } from 'firebase/app/10.4.0'; // Update the path
 
 // Your web app's Firebase configuration
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth"; // Import the getAuth function
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAi7xFHsO7BtUrJcBxUowByhVVDOq8dTYs",
-  authDomain: "hot-picapp.firebaseapp.com",
-  projectId: "hot-picapp",
-  storageBucket: "hot-picapp.appspot.com",
-  messagingSenderId: "955883367581",
-  appId: "1:955883367581:web:dcc84d8d6c4cc8910df874"
+  apiKey: "AIzaSyBAnEYo_UuzOAuwia6Sry9ZFOP7W6xX7SY",
+  authDomain: "pic-app-13be3.firebaseapp.com",
+  projectId: "pic-app-13be3",
+  storageBucket: "pic-app-13be3.appspot.com",
+  messagingSenderId: "331670202098",
+  appId: "1:331670202098:web:29a09cbaca70353dcbd26b"
 };
 
 
@@ -35,4 +37,7 @@ const projectStorage = getStorage(app); // Initialize Firebase Storage
 const projectFirestore = getFirestore(app);
 const timestamp = serverTimestamp();
 
-export { projectStorage, projectFirestore, timestamp, collection, addDoc };
+// Initialize Firebase authentication
+const auth = getAuth(app);
+
+export { projectStorage, projectFirestore, timestamp, collection, addDoc, auth };
